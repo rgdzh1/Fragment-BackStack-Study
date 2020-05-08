@@ -90,6 +90,13 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
         return true;
     }
 
+    /**
+     * 根据Fragment来处理Fragment的隐藏和展示.
+     * 这里主要使用show()和hide()方法来显示Fragment,replace()也行, 但是它要走Fragment生命周期很浪费性能.
+     * findFragmentByTag()来查找Fragment是否添加进入Activity,如果添加了就隐藏其他Fragemnt显示当前Fragment.
+     * 如果没有添加,就将已添加过的Fragment都隐藏,将当前Fragment添加并显示
+     * @param showFragment
+     */
     private void showFragment(Fragment showFragment) {
         FragmentManager supportFragmentManager = getSupportFragmentManager();
         // 查找该Fragment是否已经添加到容器中
@@ -149,7 +156,7 @@ public class MainActivity extends AppCompatActivity implements BottomNavigationV
 
     @Override
     public void onBackPressed() {
-//        super.onBackPressed();
+        //super.onBackPressed();
         // 将点击返回按钮动作接管
         if (mFragmentBackStack.size() > 1) {
             // 删除页面当前最上层Fragment
