@@ -1,0 +1,2 @@
+rootProject.name='Fragment-BackStack-Study'
+include ':app'
