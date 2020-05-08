@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/first"
+        android:icon="@mipmap/home_select"
+        android:title="第一" />
+
+    <item
+        android:id="@+id/second"
+        android:icon="@mipmap/touch_finger"
+        android:title="第二" />
+
+    <item
+        android:id="@+id/third"
+        android:icon="@mipmap/home_select"
+        android:title="第三" />
+    <item
+        android:id="@+id/four"
+        android:icon="@mipmap/touch_finger"
+        android:title="第四" />
+</menu>
+
+
